@@ -575,6 +575,12 @@ export class LcmContextEngine implements ContextEngine {
   };
 
   private config: LcmConfig;
+
+  /** Get the configured timezone, falling back to system timezone. */
+  get timezone(): string {
+    return this.config.timezone ?? Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+
   private conversationStore: ConversationStore;
   private summaryStore: SummaryStore;
   private assembler: ContextAssembler;
