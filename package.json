@@ -27,9 +27,11 @@
     "test": "vitest run --dir test"
   },
   "dependencies": {
+    "@huggingface/tokenizers": "^0.1.2",
     "@mariozechner/pi-agent-core": "*",
     "@mariozechner/pi-ai": "*",
-    "@sinclair/typebox": "0.34.48"
+    "@sinclair/typebox": "0.34.48",
+    "undici": "^7.22.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0",
